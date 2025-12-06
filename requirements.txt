@@ -1,0 +1,8 @@
+numpy       # Calculs numériques et tableaux
+scipy       # Calculs scientifiques et statistiques
+pandas      # Manipulation de données tabulaires
+matplotlib  # Graphiques 2D
+seaborn     # Graphiques stylés
+jupyterlab  # Notebooks interactifs
+tqdm        # Barres de progression pendant les calculs
+joblib      # Parallélisation et sauvegarde rapide d'objets Python
