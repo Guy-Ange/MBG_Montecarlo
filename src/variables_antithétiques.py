@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-from .simuler_modele import simuler_ST
+
 
 
 
