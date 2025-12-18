@@ -54,7 +54,7 @@ def vrai_prix_call(S0, K, r, sigma, T):
     if T <= 0:
         # Si le temps restant (T) est nul ou passé, la valeur est le payoff intrinsèque immédiat.
         # Cela correspond à la condition aux limites de l'EDP de Black-Scholes.
-        return max(S0 - K, 0)
+        return np.maximum(S0 - K, 0)
     
     # --- Calcul des paramètres d1 et d2 ---
     
