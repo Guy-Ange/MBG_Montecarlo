@@ -1,8 +1,9 @@
+
+"""On calcule le prix en utilisant un estimateur montecarlo antithétique pour reduire la 
+variance """
+
 import numpy as np
 import matplotlib.pyplot as plt
-
-
-
 
 
 

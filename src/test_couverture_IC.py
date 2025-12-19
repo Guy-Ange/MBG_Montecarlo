@@ -116,35 +116,4 @@ def plot_couverture_IC(taux_couverture, C_BS, N, estimateurs, demi_largeur_ICs):
     plt.grid(axis='y', linestyle='--', alpha=0.6)
     plt.tight_layout()
     plt.show()
-    #
-
-
-# # ---  Exécution du Test ---
-
-# # Paramètres de l'Option
-# S0 = 100.0  
-# K = 100.0   
-# r = 0.05    
-# sigma = 0.2 
-# T = 1.0     
-
-# # Paramètres du Test Statistique
-# N_simulations = 10**5   # N: Nombre de simulations par estimation (doit être grand)
-# M_repetitions = 1000    # M: Nombre de fois où l'on répète l'expérience (pour avoir une bonne statistique)
-# alpha_level = 0.05      # Niveau de signification : 5% (donc IC à 95%)
-
-# print(f"--- Test de Couverture de l'Intervalle de Confiance (IC {int((1-alpha_level)*100)}%) ---")
-# print(f"N (Simulations par IC) : {N_simulations}")
-# print(f"M (Répétitions du test) : {M_repetitions}")
-
-# taux_obs, C_BS = monte_carlo_couverture_IC(S0, K, r, sigma, T, N_simulations, M_repetitions)
-
-# print(f"\nPrix analytique (C_BS) : {C_BS:.6f}")
-# print(f"Taux de Couverture Théorique : {1 - alpha_level:.2%}")
-# print(f"Taux de Couverture Empirique observé : {taux_obs:.2%}")
-
-# # --- Interprétation du Résultat ---
-# if np.isclose(taux_obs, 1 - alpha_level, atol=0.02): # Tolérance de 2%
-#     print("\nCONCLUSION : La validation est réussie. Le taux de couverture est conforme à la théorie.")
-# else:
-#     print("\nCONCLUSION : Avertissement. Le taux de couverture s'écarte significativement de la théorie (95%).")
+    
