@@ -9,7 +9,7 @@ L’objectif est double :
 - **Analyser rigoureusement la convergence** de l’estimateur Monte-Carlo standard (MCS)
 - **Quantifier l’amélioration de précision et de coût de calcul** apportée par des techniques industrielles de réduction de variance
 
-Le projet vise à illustrer comment des méthodes Monte-Carlo, a priori coûteuses et bruitées, peuvent atteindre une **précision quasi-analytique**, tout en conservant la flexibilité requise pour le pricing de produits complexes.
+Le projet vise à illustrer comment des méthodes Monte-Carlo, a priori coûteuses et bruitées, peuvent atteindre une **précision quasi-analytique**, tout en conservant la flexibilité requise pour la valorisation de produits complexes.
 
 > 📌 **Contexte académique et quantitatif** : ce travail s’inscrit dans une démarche M1/M2 orientée finance quantitative, méthodes numériques et modélisation stochastique.
 
