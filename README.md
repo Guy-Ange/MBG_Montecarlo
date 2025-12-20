@@ -31,6 +31,9 @@ Ce facteur représente le **gain équivalent en temps de calcul** pour atteindre
 | **Variables Antithétiques (VA)** |  **3.47** | Gain immédiat, simple, sans surcoût algorithmique |
 | **Variables de Contrôle (VC)** |  **$2,5 \times 10^9 $** | Technique de référence en pratique industrielle |
 
+**Preuve Visuelle de la Performance (VA vs MCS)**
+![Comparaison de la Dispersion des Estimateurs MC (VC)](resultats/figures/antithetic_boxplot.png)
+
 **Preuve Visuelle de la Performance (VC vs MCS)**
 ![Comparaison de la Dispersion des Estimateurs MC (VC)](resultats/figures/control_variate_boxplot.png)
 
