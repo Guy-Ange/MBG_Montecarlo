@@ -40,6 +40,13 @@ Ce facteur représente le **gain équivalent en temps de calcul** pour atteindre
 > **Conclusion principale** : la combinaison systématique des méthodes (VA puis VC) permet d’obtenir une **convergence rapide**, stable et économiquement exploitable.
 
 ---
+## 📚 Documentation Complète du Projet
+
+Le présent dépôt contient l'implémentation du projet. L'intégralité du travail théorique, la validation statistique rigoureuse (TCL, RMSE), la justification des choix méthodologiques et l'analyse approfondie des résultats quantifiés sont détaillées dans le rapport final.
+
+Ce document est disponible au format PDF dans le répertoire `docs/` :
+
+* **Rapport Final (PDF) :** `rapport.pdf`
 
 ## ⚙️ Paramètres du Modèle
 
@@ -83,18 +90,21 @@ Toutes les estimations sont réalisées à nombre de trajectoires comparable.
 
 ## 📁 Organisation du Projet
 
-├── src/
-│   ├── simuler_modele.py
-│   ├── estimateur_montecarlo.py
-│   ├── variables_antithetiques.py
-│   ├── control_variate.py
-│   ├── analyse_convergence_erreur.py
-│   └── test_couverture_IC.py
+├── docs/
+│ └── rapport.pdf
 │
 ├── notebooks/
-│   ├── validation_montecarlo.ipynb
-│   ├── optimisation_variables_antithetiques.ipynb
-│   └── optimisation_variable_controle.ipynb
+│ ├── validation_montecarlo.ipynb
+│ ├── optimisation_variables_antithetiques.ipynb
+│ └── optimisation_variable_controle.ipynb
+│
+├── src/
+│ ├── simuler_modele.py
+│ ├── estimateur_montecarlo.py
+│ ├── variables_antithetiques.py
+│ ├── control_variate.py
+│ ├── analyse_convergence_erreur.py
+│ └── test_couverture_IC.py
 │
 ├── requirements.txt
 └── README.md
