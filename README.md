@@ -26,12 +26,12 @@ L’efficacité des différentes techniques est mesurée à l’aide du **Facteu
      {\mathrm{Var}(\hat{C}_{\text{TRV}})}
 \]
 
-Ce facteur représente le **gain équivalent en temps de calcul** pour atteindre une même précision statistique.
+Ce facteur représente le **gain équivalent en temps de calcul** pour atteindre une même précision statistique. Plus il est grand, plus le temps de calcul diminue.
 
-| Technique | Réduction de Variance | Facteur d’Accélération \(\mathcal{S}\) | Interprétation |
-|---|---|---|---|
-| **Variables Antithétiques (VA)** | ≈ 70 % | **≈ 3.5** | Gain immédiat, simple, sans surcoût algorithmique |
-| **Variables de Contrôle (VC)** | 98 % – 99.8 % | **≈ 50 à 500** | Technique de référence en pratique industrielle |
+| Technique |  Facteur d’Accélération \(\mathcal{S}\) | Interprétation |
+|---|---|---|
+| **Variables Antithétiques (VA)** |  **3.47** | Gain immédiat, simple, sans surcoût algorithmique |
+| **Variables de Contrôle (VC)** |  **\[2,5 \times 10^9 \]** | Technique de référence en pratique industrielle |
 
 > **Conclusion principale** : la combinaison systématique des méthodes (VA puis VC) permet d’obtenir une **convergence rapide**, stable et économiquement exploitable.
 
@@ -77,9 +77,11 @@ Toutes les estimations sont réalisées à nombre de trajectoires comparable.
 
 ├── src/
 │ ├── simuler_modele.py
-│ ├── prix_montecarlo_call.py
-│ ├── prix_mc_antithetic.py
-│ └── prix_mc_control_variate.py
+| |__ analyse_convergence_erreur.py
+| |__ test_couverture_IC.py
+│ ├── estimateur_montecarlo.py
+│ ├── variables_antithetiques.py
+│ └── control_variate.py
 │
 ├── notebooks/
 │ ├── validation_montecarlo.ipynb
@@ -91,10 +93,12 @@ Toutes les estimations sont réalisées à nombre de trajectoires comparable.
 
 | Fichier | Description | Fonctions Clés |
 |---|---|---|
-| `simuler_modele.py` | Modélisation stochastique | `simuler_ST`, `vrai_prix_call` |
-| `prix_montecarlo_call.py` | Monte-Carlo standard | `prix_montecarlo_call` |
-| `prix_mc_antithetic.py` | Variables Antithétiques | `price_mc_antithetic_call` |
-| `prix_mc_control_variate.py` | Variables de Contrôle | `prix_mc_control_variate_call` |
+| `simuler_modele.py` | Modélisation stochastique | `simuler_ST`|
+| `estimateur_montecarlo.py` | Monte-Carlo standard | `prix_montecarlo_call`, `vrai_prix_call` |
+| `analyse_convergence_erreur` | Confirmation de la vitesse de convergence| `simuler_ST`|
+| `test_couverture_IC` | Verification statistique de la convergence montecarlo | `simuler_ST`|
+| `variables_antithetiques.py` | Variables Antithétiques | `price_mc_antithetic_call` |
+| `control_variate.py` | Variables de Contrôle | `prix_mc_control_variate_call` |
 
 ---
 
@@ -117,6 +121,7 @@ Les versions exactes utilisées sont précisées dans le fichier `requirements.t
 ### Installation
 
 pip install -r requirements.txt
+
 jupyter lab
 
 ### Notebooks à Exécuter (par ordre recommandé)
