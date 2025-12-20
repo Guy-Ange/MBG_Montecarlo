@@ -31,6 +31,9 @@ Ce facteur représente le **gain équivalent en temps de calcul** pour atteindre
 | **Variables Antithétiques (VA)** |  **3.47** | Gain immédiat, simple, sans surcoût algorithmique |
 | **Variables de Contrôle (VC)** |  **$2,5 \times 10^9 $** | Technique de référence en pratique industrielle |
 
+**Preuve Visuelle de la Performance (VC vs MCS)**
+![Comparaison de la Dispersion des Estimateurs MC (VC)](resultats/figures/control_variate_boxplot.png)
+
 > **Conclusion principale** : la combinaison systématique des méthodes (VA puis VC) permet d’obtenir une **convergence rapide**, stable et économiquement exploitable.
 
 ---
@@ -56,6 +59,10 @@ $$
 ---
 
 ## 🧪 Méthodologie Numérique
+
+Le graphique ci-dessous valide l'adhérence de l'estimateur Monte-Carlo à la vitesse de convergence théorique $\mathcal{O}(N^{-1/2})$ du RMSE, un prérequis essentiel à toute optimisation.
+
+![Convergence de l'erreur](resultats/figures/convergence_erreur_RMSE.png)
 
 La démarche expérimentale suit les étapes suivantes :
 
