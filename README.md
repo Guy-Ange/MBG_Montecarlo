@@ -20,15 +20,17 @@ Le projet vise à illustrer comment des méthodes Monte-Carlo, a priori coûteus
 L’efficacité des différentes techniques est mesurée à l’aide du **Facteur d’Accélération** :
 
 $$
+
 \mathcal{S}
 =
 \frac{\mathrm{Var}(\hat{C}_{\text{MCS}})}
      {\mathrm{Var}(\hat{C}_{\text{TRV}})}
+
  $$
 
 Ce facteur représente le **gain équivalent en temps de calcul** pour atteindre une même précision statistique. Plus il est grand, plus le temps de calcul diminue.
 
-| Technique |  Facteur d’Accélération \(\mathcal{S}\) | Interprétation |
+| Technique |  Facteur d’Accélération $\mathcal{S}$ | Interprétation |
 |---|---|---|
 | **Variables Antithétiques (VA)** |  **3.47** | Gain immédiat, simple, sans surcoût algorithmique |
 | **Variables de Contrôle (VC)** |  **$2,5 \times 10^9 $** | Technique de référence en pratique industrielle |
@@ -52,7 +54,7 @@ Les simulations sont réalisées sur un **Call Européen At-The-Money** :
 **Prix analytique de référence (Black–Scholes)** :
 
 $$
-\mathcal{C}_{\text{BS}} = 10.4506
+{C}_{\text{BS}} = 10.4506
 $$
 
 ---
@@ -92,7 +94,7 @@ Toutes les estimations sont réalisées à nombre de trajectoires comparable.
 └── README.md
 
 
-## 📁 Modules Python (`src/`)
+### 📁 Modules Python (`src/`)
 
 | Module | Rôle | Fonctions principales |
 |------|------|----------------------|
