@@ -19,19 +19,19 @@ Le projet vise à illustrer comment des méthodes Monte-Carlo, a priori coûteus
 
 L’efficacité des différentes techniques est mesurée à l’aide du **Facteur d’Accélération** :
 
-\[
+$$
 \mathcal{S}
 =
 \frac{\mathrm{Var}(\hat{C}_{\text{MCS}})}
      {\mathrm{Var}(\hat{C}_{\text{TRV}})}
-\]
+ $$
 
 Ce facteur représente le **gain équivalent en temps de calcul** pour atteindre une même précision statistique. Plus il est grand, plus le temps de calcul diminue.
 
 | Technique |  Facteur d’Accélération \(\mathcal{S}\) | Interprétation |
 |---|---|---|
 | **Variables Antithétiques (VA)** |  **3.47** | Gain immédiat, simple, sans surcoût algorithmique |
-| **Variables de Contrôle (VC)** |  **\[2,5 \times 10^9 \]** | Technique de référence en pratique industrielle |
+| **Variables de Contrôle (VC)** |  **$2,5 \times 10^9 $** | Technique de référence en pratique industrielle |
 
 > **Conclusion principale** : la combinaison systématique des méthodes (VA puis VC) permet d’obtenir une **convergence rapide**, stable et économiquement exploitable.
 
@@ -43,17 +43,17 @@ Les simulations sont réalisées sur un **Call Européen At-The-Money** :
 
 | Paramètre | Symbole | Valeur |
 |---|---|---|
-| Prix initial | \(S_0\) | 100 |
-| Strike | \(K\) | 100 |
-| Taux sans risque | \(r\) | 5 % |
-| Volatilité | \(\sigma\) | 20 % |
-| Maturité | \(T\) | 1 an |
+| Prix initial | $S_0$ | 100 |
+| Strike | $K$ | 100 |
+| Taux sans risque | $r$ | 5 % |
+| Volatilité | $\sigma$ | 20 % |
+| Maturité | $T$ | 1 an |
 
 **Prix analytique de référence (Black–Scholes)** :
 
-\[
+$$
 \mathcal{C}_{\text{BS}} = 10.4506
-\]
+$$
 
 ---
 
@@ -76,29 +76,33 @@ Toutes les estimations sont réalisées à nombre de trajectoires comparable.
 ## 📁 Organisation du Projet
 
 ├── src/
-│ ├── simuler_modele.py
-| |__ analyse_convergence_erreur.py
-| |__ test_couverture_IC.py
-│ ├── estimateur_montecarlo.py
-│ ├── variables_antithetiques.py
-│ └── control_variate.py
+│   ├── simuler_modele.py
+│   ├── estimateur_montecarlo.py
+│   ├── variables_antithetiques.py
+│   ├── control_variate.py
+│   ├── analyse_convergence_erreur.py
+│   └── test_couverture_IC.py
 │
 ├── notebooks/
-│ ├── validation_montecarlo.ipynb
-│ ├── optimisation_variables_antithetiques.ipynb
-│ └── optimisation_variable_controle.ipynb
+│   ├── validation_montecarlo.ipynb
+│   ├── optimisation_variables_antithetiques.ipynb
+│   └── optimisation_variable_controle.ipynb
 │
 ├── requirements.txt
 └── README.md
 
-| Fichier | Description | Fonctions Clés |
-|---|---|---|
-| `simuler_modele.py` | Modélisation stochastique | `simuler_ST`|
-| `estimateur_montecarlo.py` | Monte-Carlo standard | `prix_montecarlo_call`, `vrai_prix_call` |
-| `analyse_convergence_erreur` | Confirmation de la vitesse de convergence| `simuler_ST`|
-| `test_couverture_IC` | Verification statistique de la convergence montecarlo | `simuler_ST`|
-| `variables_antithetiques.py` | Variables Antithétiques | `price_mc_antithetic_call` |
-| `control_variate.py` | Variables de Contrôle | `prix_mc_control_variate_call` |
+
+## 📁 Modules Python (`src/`)
+
+| Module | Rôle | Fonctions principales |
+|------|------|----------------------|
+| `simuler_modele.py` | Simulation du sous-jacent (GBM) | `simuler_ST` |
+| `estimateur_montecarlo.py` | Estimateur Monte-Carlo standard | `prix_montecarlo_call`, `vrai_prix_call` |
+| `variables_antithetiques.py` | Réduction de variance – variables antithétiques | `price_mc_antithetic_call` |
+| `control_variate.py` | Réduction de variance – variables de contrôle | `prix_mc_control_variate_call` |
+| `analyse_convergence_erreur.py` | Analyse de la convergence et de l’erreur | `plot_convergence_RMSE` |
+| `test_couverture_IC.py` | Tests de couverture des IC (TCL) | `plot_couverture_IC` |
+
 
 ---
 
