@@ -90,6 +90,7 @@ Toutes les estimations sont réalisées à nombre de trajectoires comparable.
 
 ## 📁 Organisation du Projet
 
+```
 ├── docs/
 
 │ └── rapport.pdf
@@ -109,7 +110,7 @@ Toutes les estimations sont réalisées à nombre de trajectoires comparable.
 │
 ├── requirements.txt
 └── README.md
-
+```
 
 ### 📁 Modules Python (`src/`)
 
@@ -129,6 +130,7 @@ Toutes les estimations sont réalisées à nombre de trajectoires comparable.
 
 Les bibliothèques Python suivantes sont nécessaires à l’exécution du projet :
 
+```
 numpy
 scipy
 pandas
@@ -137,6 +139,7 @@ seaborn
 jupyterlab
 tqdm
 joblib
+```
 
 Les versions exactes utilisées sont précisées dans le fichier `requirements.txt`.
 
