@@ -91,6 +91,7 @@ Toutes les estimations sont réalisées à nombre de trajectoires comparable.
 ## 📁 Organisation du Projet
 
 ├── docs/
+
 │ └── rapport.pdf
 │
 ├── notebooks/
