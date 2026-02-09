@@ -28,7 +28,7 @@ Ce facteur représente le **gain équivalent en temps de calcul** pour atteindre
 
 | Technique |  Facteur d’Accélération $\mathcal{S}$ | Interprétation |
 |---|---|---|
-| **Variables Antithétiques (VA)** |  **3.47** | Gain immédiat, simple, sans surcoût algorithmique |
+| **Variables Antithétiques (VA)** |  3.47 | Gain immédiat, simple, sans surcoût algorithmique |
 | **Variables de Contrôle (VC)** |  **$2,5 \times 10^9$** | Technique de référence en pratique industrielle |
 
 **Preuve Visuelle de la Performance (VA vs MCS)**
